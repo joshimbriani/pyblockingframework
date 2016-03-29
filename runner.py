@@ -1,5 +1,6 @@
 import csv
 import sys
+from comparer import Comparer
 
 def main():
 	file1Name = sys.argv[1]
@@ -20,7 +21,14 @@ def main():
 		for row in fileReader:
 			data2.append(row)
 
-	print len(data1)
+	if comparisonToRun == "totalDescription":
+		result = Comparer(data1, data2, comparisonToRun)
+		result.totalDescription()
+	elif comparisonToRun == "BSL":
+		comp = Comparer(data1, data2, comparisonToRun)
+		comp.BSL()
+
+	print data1[0]
 	print len(data2)
 	print comparisonToRun
 
