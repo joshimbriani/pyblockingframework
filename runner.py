@@ -30,5 +30,4 @@ def main():
 
 	print result.evaluate(result, len(data1), len(data2))
 
-if __name__ == "__main__":
-	main()
+main()
