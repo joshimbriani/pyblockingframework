@@ -21,12 +21,16 @@ def main():
 		for row in fileReader:
 			data2.append(row)
 
+	result = Comparer(data1, data2, comparisonToRun)
+
 	if comparisonToRun == "totalDescription":
 		result = Comparer(data1, data2, comparisonToRun)
 		result.runTotalDescription()
 	elif comparisonToRun == "BSL":
 		result = Comparer(data1, data2, comparisonToRun)
-		result.BSL()
+		result.runBSL()
+	elif comparisonToRun == "blockingTokens":
+		result.runBlockingTokens()
 
 	print result.evaluate(result, len(data1), len(data2))
 
