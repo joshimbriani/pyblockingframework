@@ -25,12 +25,10 @@ def main():
 		result = Comparer(data1, data2, comparisonToRun)
 		result.totalDescription()
 	elif comparisonToRun == "BSL":
-		comp = Comparer(data1, data2, comparisonToRun)
-		comp.BSL()
+		result = Comparer(data1, data2, comparisonToRun)
+		result.BSL()
 
-	print data1[0]
-	print len(data2)
-	print comparisonToRun
+	print result.evaluate()
 
 if __name__ == "__main__":
 	main()

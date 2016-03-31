@@ -20,6 +20,11 @@ class Comparer:
 		blocks = BSL(data1, data2)
 		print blocks
 
-	def hello(self):
-		print "Hello"
-		return "Hello"
+	def evaluate(self, blocks, lenData1, lenData2):
+		totalComparisons = 0
+		for block in blocks:
+			totalComparisons += ((len(totalComparisons)**2 + len(totalComparisons)) / 2)
+		RR = totalComparisons / (lenData1*lenData2)
+
+		return RR
+		
