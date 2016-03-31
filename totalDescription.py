@@ -1,2 +1,2 @@
-def totalDescription():
-	return "Help"
+def totalDescription(data1, data2):
+	return []

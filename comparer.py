@@ -12,8 +12,8 @@ class Comparer:
 		self.data2 = data2
 		comparisonMethod = comparisonMethod
 
-	def runTotalDescription(self, data1, data2):
-		blocks = totalDescription(data1, data2)
+	def runTotalDescription(self):
+		blocks = totalDescription(self.data1, self.data2)
 		print blocks
 
 	def runBSL(self, data1, data2):
