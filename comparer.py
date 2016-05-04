@@ -51,12 +51,16 @@ class Comparer:
 		print "Starting PC calculation"
 
 		for index1, block in enumerate(self.blocks):
-			for index, item in enumerate(self.blocks[block]):
-				for i in range(index, len(self.blocks[block])):
-					if fuzz.token_set_ratio(self.blocks[block][index][1], self.blocks[block][i][1]) > 70:
-						correctComparisons += 1
-					allComparisons += 1
-			print "Block " + str(index1) + " of " + str(len(self.blocks)) + " compared"
+			if len(block) < ((1 / 3000) * (lenData1 + lenData2)):
+				print "The size of the block is " + str(len(block))
+				for index, item in enumerate(self.blocks[block]):
+					#print "Running comparison"
+					for i in range(index, len(self.blocks[block])):
+						if fuzz.token_set_ratio(self.blocks[block][index][1], self.blocks[block][i][1]) > 70:
+							correctComparisons += 1
+						allComparisons += 1
+				print "Running PC is " + str(correctComparisons / allComparisons)
+				print "Block " + str(index1) + " of " + str(len(self.blocks)) + " compared"
 
 		PC = correctComparisons / allComparisons
 
