@@ -13,7 +13,7 @@ class Comparer:
 	def __init__(self, data1, data2, comparisonMethod):
 		self.data1 = data1
 		self.data2 = data2
-		
+
 		self.dataelement =  input("Which element of the first data set is most important?")
 
 		#self.data2element = input("Which element of the second data set is most important?")
@@ -21,8 +21,8 @@ class Comparer:
 		comparisonMethod = comparisonMethod
 
 	def runTotalDescription(self):
-		self.temp = totalDescription(self.data1, self.data2)
-		self.blocks = blockingTokens(self.data1, self.data2)
+		self.blocks = totalDescription(self.data1, self.data2)
+		#self.blocks = blockingTokens(self.data1, self.data2)
 		#print blocks
 
 	def runBlockingTokens(self):
